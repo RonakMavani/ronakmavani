@@ -65,14 +65,12 @@ nav a {
     font-size: 64px;
     font-weight: 700;
     line-height: 1.1;
-    margin: 0 0 20px;
 }
 
 .hero-desc {
     max-width: 600px;
     font-size: 18px;
     color: #555;
-    margin-bottom: 40px;
 }
 
 .view-projects {
