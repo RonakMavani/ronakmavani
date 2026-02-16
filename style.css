@@ -158,6 +158,40 @@ body {
     color: #444;
 }
 
+/* General link style */
+.nav-links a {
+    text-decoration: none;
+    color: #888; /* Dim the others slightly so Home pops */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* The Highlighted (Active) Style */
+.nav-links a.active {
+    color: #000; /* Darker black for the active link */
+    font-weight: 700; /* Bolder text */
+}
+
+/* Optional: Add a small dot or line under the active link */
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 50%; /* Makes it a clean dot */
+}
+
+/* Hover effect for non-active links */
+.nav-links a:hover {
+    color: #000;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .nav-links, .btn-outline {
