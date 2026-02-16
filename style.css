@@ -52,20 +52,24 @@ nav a {
 /* Hero */
 .hero {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 80px;
-    min-height: 70vh;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    height: 80vh;              /* full screen height */
+    text-align: center;
 }
 
 .hero-left {
-    max-width: 600px;
+    max-width: 700px;
 }
 
-.hero-left h1 {
-    font-size: 90px;
-    line-height: 1.05;
-    font-weight: 900;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: #555;
 }
 
 .hero-desc {
