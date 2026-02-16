@@ -121,6 +121,17 @@ nav a {
     transition: opacity 0.3s;
 }
 
+.location {
+    margin-top: 30px;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #777;
+}
+
 .socials a:hover {
     opacity: 0.6;
 }
