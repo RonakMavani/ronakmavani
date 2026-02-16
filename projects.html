@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ronak Mavani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .nav-link { position: relative; transition: all 0.3s ease; }
+        .nav-link:hover { color: #000; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -4px; left: 0; background-color: #000; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: #000; font-weight: 700; }
+        .project-card { border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 5rem; }
+        .project-card:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+
+    <header class="flex items-center justify-between px-6 py-8 lg:px-20 border-b border-black/10 sticky top-0 bg-white z-50">
+        <div class="flex items-center gap-3">
+            <img src="my-profile.jpg" alt="Ronak Mavani" class="size-10 rounded-full object-cover border border-black/10">
+            <h2 class="text-black text-lg font-bold tracking-tighter uppercase">Ronak Mavani</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+            <a class="nav-link text-black text-xs font-bold uppercase tracking-widest" href="index.html">Home</a>
+            <a class="nav-link text-black text-xs font-bold uppercase tracking-widest" href="about.html">About Me</a>
+            <a class="nav-link text-black text-xs font-bold uppercase tracking-widest active" href="projects.html">Projects</a>
+        
+        </nav>
+        <a href="#contact" class="hidden md:block border border-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all">
+            Get in touch
+        </a>
+    </header>
+
+    <main>
+        <section class="py-20 text-center border-b border-black/5">
+            <h1 class="text-5xl lg:text-7xl font-black tracking-tighter">
+                Android & Flutter Projects
+            </h1>
+            <div class="w-24 h-1 bg-black mx-auto mt-4"></div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 py-20 space-y-24">
+            
+            <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">Sports & Gaming</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6">Fantasy Spin</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">US-based Sports Betting Application : 
+Built and enhanced key modules, implemented real-time API integrations, improved app performance, refined UI/UX design, and performed continuous debugging to maintain stability and scalability.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Flutter App</span>
+                
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.wagerwire_app" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+               <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">HR TECH • RECRUITING</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6 ">TaTracker</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">TATracker – Applicant Tracking System : 
+Contributed to the development of multiple modules and features for TATracker, an intuitive applicant tracking system designed for lean recruiting teams. Handled API integrations, enhanced UI/UX design, and resolved bugs to improve overall performance and reliability.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Flutter App</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.prod.tatracker" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+             <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">Delivery Tracking</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6 ">Ted App - Tilhill</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">Material Delivery & Tracking Application : Tilhill Forestry Ltd
+Developed a mobile application to record and manage the delivery and receipt of materials for customers of Tilhill Forestry Ltd. The app streamlined the delivery workflow, improved record accuracy, and ensured proper documentation for each transaction.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Flutter App</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.tedapp.v2&hl=en_IN" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+              <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">Business Intelligence</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6 ">Smarten Analytics</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">A mobile business intelligence app that provides self-serve analytics, dashboards, reports, KPIs, and NLP-based search. It enables business users to analyze data, generate insights, and make fact-based decisions without technical expertise.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Flutter App</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.smarten_dashboard&hl=en_IN" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+               <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">HEALTH • FITNESS</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6">Limitless</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">Health Tracking App : A mobile application designed to help users track their health and fitness goals. The app allows users to monitor daily intake, upload meals, automatically calculate calories and ingredients, and manage personalized plans for weight gain or weight loss.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Android Native</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.limitless.life360" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+              <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">Grocery Shopping & Recipe App</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6">MyLidl</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">Grocery Shopping & Recipe App : 
+Worked on a grocery shopping application where users could purchase products and upload their own recipes. Contributed to multiple module enhancements and performed bug fixes to improve overall performance and user experience.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Android Native</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.lidl.android" target="_blank" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-neutral-800 transition-all">
+                    VIEW ON PLAY STORE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="text-center project-card">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-4">E-COMMERCE • PHARMACY</p>
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-6">MedGreen</h2>
+                <p class="text-black/60 text-lg font-light max-w-2xl mx-auto mb-8">Pharmacy Medicine Shopping App : 
+Developed a pharmacy application that enables users to place and track medicine orders. Worked on multiple advanced modules, improved functionality, and ensured a smooth and reliable user experience.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="px-4 py-1 bg-neutral-100">Android Native</span>
+            
+                </div>
+            
+            </div>
+
+         
+         
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+                <div class="border border-black/10 p-8 text-center hover:bg-neutral-50 transition-colors">
+                   
+                    <h3 class="text-2xl font-black mb-4 uppercase">Smartworkx</h3>
+                     <p class="text-[10px] font-bold uppercase text-black/40 mb-2">This was a company specific app. Which is not uploaded in
+playstore. In this app employees are getting task. They have to
+update status, upload photos and sign the documents.
+</p>
+                </div>
+                <div class="border border-black/10 p-8 text-center hover:bg-neutral-50 transition-colors">
+                     <h3 class="text-2xl font-black mb-4 uppercase">One Call</h3>
+                    <p class="text-[10px] font-bold uppercase text-black/40 mb-2">This is a service based app. In which user can book several types of
+cleaning and other services.
+</p>
+                   
+                    <a href="https://play.google.com/store/apps/details?id=com.onecall" target="_blank" class="text-xs font-bold uppercase underline">Play Store</a>
+                </div>
+                <div class="border border-black/10 p-8 text-center hover:bg-neutral-50 transition-colors">
+                    
+                    <h3 class="text-2xl font-black mb-4 uppercase">Lappen Fashion
+</h3>
+                    <p class="text-[10px] font-bold uppercase text-black/40 mb-2">This is a cloth shopping app. This application is totally redeveloped
+by me.</p>
+                
+                </div>
+                <div class="border border-black/10 p-8 text-center hover:bg-neutral-50 transition-colors">
+                   
+                    <h3 class="text-2xl font-black mb-4 uppercase">EOR App</h3>
+                     <p class="text-[10px] font-bold uppercase text-black/40 mb-2">EOR is an app in which user can find a jobs. They can fill up his
+details sign documents and fill up his profile for the particular job.</p>
+                  
+                </div>
+            </div>
+        </section>
+
+       <section id="contact" class="max-w-7xl mx-auto px-6 py-24 lg:px-20 border-t border-black/10 bg-neutral-50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h2 class="text-5xl lg:text-7xl font-black tracking-tighter mb-8 uppercase">Let's <br> Work</h2>
+                    <p class="text-black/60 text-lg mb-12 max-w-sm">
+                        I am currently looking for <strong>Remote Work Only</strong>. Reach out via WhatsApp for the fastest reply.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-5">
+                            <div class="size-12 bg-green-500 text-white flex items-center justify-center rounded-full shadow-lg shadow-green-200">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase text-black/40 tracking-widest">Primary Contact</p>
+                                <p class="text-lg font-bold">+91 8140644320</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-5">
+                            <div class="size-12 border border-black/10 bg-white flex items-center justify-center rounded-full">
+                                <i class="fa-regular fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase text-black/40 tracking-widest">Email Address</p>
+                                <p class="text-lg font-bold">ronaktwork@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 lg:p-12 border border-black/5 shadow-sm">
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black/50">Your Name</label>
+                            <input type="text" id="userName" placeholder="Type your name here" class="w-full bg-transparent border-b-2 border-black/10 py-3 focus:border-black outline-none transition-all placeholder:text-black/20 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black/50">Project Interests</label>
+                            <input type="text" id="userSubject" placeholder="e.g. Flutter Application" class="w-full bg-transparent border-b-2 border-black/10 py-3 focus:border-black outline-none transition-all placeholder:text-black/20 font-medium">
+                        </div>
+                        
+                        <div class="pt-6 flex flex-col gap-4">
+                            <button onclick="sendToWhatsApp()" class="group w-full bg-[#25D366] text-white font-black py-5 uppercase tracking-widest text-xs hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> 
+                                WhatsApp Me First
+                            </button>
+                            
+                            <button onclick="sendToEmail()" class="w-full border-2 border-black text-black font-black py-5 uppercase tracking-widest text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center gap-3">
+                                <i class="fa-regular fa-envelope text-xl"></i> 
+                                Send Email
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-black/5 text-center">
+        <p class="text-[10px] text-black/40 font-bold uppercase tracking-[0.3em] mb-2">Currently based in</p>
+        <p class="text-sm font-medium mb-8">Porbandar, Gujarat, India.</p>
+        </footer>
+
+    <script>
+        function sendWhatsApp() {
+            const name = document.getElementById('userName').value || "Friend";
+            const subject = document.getElementById('userSubject').value || "a project";
+            const phone = "918140644320";
+            const message = `Hi Ronak, I'm ${name}. I'm interested in talking about ${subject}.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
