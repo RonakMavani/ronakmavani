@@ -52,9 +52,9 @@ nav a {
 /* Hero */
 /* Hero Section */
 .hero {
-    height: calc(100vh - 140px); /* adjust if needed */
+    min-height: 80vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   /* This stacks items vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
