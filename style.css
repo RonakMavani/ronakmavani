@@ -108,10 +108,23 @@ nav a {
     color: #555;
 }
 
+.socials {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
 .socials a {
-    margin: 0 15px;
     text-decoration: none;
-    color: #111;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.socials a:hover {
+    opacity: 0.6;
 }
 
 copyright {
