@@ -23,40 +23,63 @@
         }
         .nav-link:hover::after, .nav-link.active::after { width: 100%; }
         .nav-link.active { color: #000; font-weight: 700; }
+
+        /* Mobile Menu Animation */
+        #mobile-menu { 
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            transform: translateY(-100%); 
+        }
+        #mobile-menu.open { transform: translateY(0); }
     </style>
 </head>
 <body class="bg-white text-black antialiased">
 
-    <header class="flex items-center justify-between px-6 py-8 lg:px-20 border-b border-black/10 sticky top-0 bg-white z-50">
+    <header class="flex items-center justify-between px-6 py-6 lg:py-8 lg:px-20 border-b border-black/10 sticky top-0 bg-white z-50">
         <div class="flex items-center gap-3">
             <img src="my-profile.jpg" alt="Ronak Mavani" class="size-10 rounded-full object-cover border border-black/10">
-            <h2 class="text-black text-lg font-bold tracking-tighter uppercase">Ronak Mavani</h2>
+            <h2 class="text-black text-base lg:text-lg font-bold tracking-tighter uppercase">Ronak Mavani</h2>
         </div>
+
         <nav class="hidden md:flex items-center gap-10">
-            <a class="nav-link text-black text-xs font-bold uppercase tracking-widest" href="index.html">Home</a>
+            <a class="nav-link text-black text-xs font-bold uppercase tracking-widest active" href="index.html">Home</a>
             <a class="nav-link text-black text-xs font-bold uppercase tracking-widest" href="about.html">About Me</a>
             <a class="nav-link text-black text-xs font-bold uppercase tracking-widest" href="projects.html">Projects</a>
-        
         </nav>
-        <a href="#contact" class="hidden md:block border border-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all">
-            Get in touch
-        </a>
+
+        <div class="flex items-center gap-4">
+            <a href="#contact" class="hidden md:block border border-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all">
+                Get in touch
+            </a>
+            <button onclick="toggleMenu()" class="md:hidden text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
     </header>
 
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] md:hidden flex flex-col justify-center items-center gap-8 shadow-xl">
+        <button onclick="toggleMenu()" class="absolute top-8 right-6 text-4xl focus:outline-none">&times;</button>
+        
+        <a class="text-xl font-bold uppercase tracking-widest border-b-2 border-black" href="index.html" onclick="toggleMenu()">Home</a>
+        <a class="text-xl font-bold uppercase tracking-widest text-black/40" href="about.html" onclick="toggleMenu()">About Me</a>
+        <a class="text-xl font-bold uppercase tracking-widest text-black/40" href="projects.html" onclick="toggleMenu()">Projects</a>
+        
+        <a class="bg-black text-white px-10 py-4 text-sm font-bold uppercase tracking-widest mt-4" href="#contact" onclick="toggleMenu()">Get in touch</a>
+    </div>
+
     <main>
-        <section class="flex flex-col items-center justify-center min-h-[80vh] text-center px-6">
-            <h1 class="text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-6">
-                Flutter & Android <br> Developer
+        <section class="flex flex-col items-center justify-center min-h-[70vh] lg:min-h-[80vh] text-center px-6 py-20">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[1] lg:leading-[0.9] tracking-tighter mb-6">
+                Flutter & Android <br class="hidden sm:block"> Developer
             </h1>
-            <p class="text-black/60 text-lg lg:text-xl font-light max-w-xl mb-12">
+            <p class="text-black/60 text-base lg:text-xl font-light max-w-xl mb-12">
                 Building fast, scalable, and user-friendly mobile applications with clean code and modern UI.
             </p>
             <div class="flex flex-col items-center gap-8">
-                <a href="#" class="text-black font-black uppercase tracking-widest text-sm border-b-2 border-black pb-1 hover:translate-y-[-2px] transition-transform">
+                <a href="projects.html" class="text-black font-black uppercase tracking-widest text-sm border-b-2 border-black pb-1 hover:translate-y-[-2px] transition-transform">
                     View Projects &rarr;
                 </a>
                 
-                <div class="flex gap-10 mt-4">
+                <div class="flex flex-wrap justify-center gap-8 lg:gap-10 mt-4">
                     <a href="https://www.linkedin.com/in/ronak-mavani-33a16295/" target="_blank" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-blue-600 transition-colors">
                         <i class="fa-brands fa-linkedin text-lg"></i> Linkedin
                     </a>
@@ -67,18 +90,18 @@
             </div>
         </section>
 
-        <section id="contact" class="max-w-7xl mx-auto px-6 py-24 lg:px-20 border-t border-black/10 bg-neutral-50">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <section id="contact" class="max-w-7xl mx-auto px-6 py-16 lg:py-24 lg:px-20 border-t border-black/10 bg-neutral-50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                 
-                <div>
-                    <h2 class="text-5xl lg:text-7xl font-black tracking-tighter mb-8 uppercase">Let's <br> Work</h2>
+                <div class="text-left">
+                    <h2 class="text-5xl lg:text-7xl font-black tracking-tighter mb-8 uppercase leading-[0.9]">Let's <br> Work</h2>
                     <p class="text-black/60 text-lg mb-12 max-w-sm">
                         I am currently looking for <strong>Remote Work Only</strong>. Reach out via WhatsApp for the fastest reply.
                     </p>
                     
                     <div class="space-y-8">
                         <div class="flex items-center gap-5">
-                            <div class="size-12 bg-green-500 text-white flex items-center justify-center rounded-full shadow-lg shadow-green-200">
+                            <div class="size-12 bg-green-500 text-white flex-shrink-0 flex items-center justify-center rounded-full shadow-lg shadow-green-200">
                                 <i class="fa-brands fa-whatsapp text-2xl"></i>
                             </div>
                             <div>
@@ -87,18 +110,18 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-5">
-                            <div class="size-12 border border-black/10 bg-white flex items-center justify-center rounded-full">
+                            <div class="size-12 border border-black/10 bg-white flex-shrink-0 flex items-center justify-center rounded-full">
                                 <i class="fa-regular fa-envelope text-xl"></i>
                             </div>
                             <div>
                                 <p class="text-[10px] font-bold uppercase text-black/40 tracking-widest">Email Address</p>
-                                <p class="text-lg font-bold">ronaktwork@gmail.com</p>
+                                <p class="text-lg font-bold break-all">ronaktwork@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 lg:p-12 border border-black/5 shadow-sm">
+                <div class="bg-white p-6 md:p-8 lg:p-12 border border-black/5 shadow-sm">
                     <div class="space-y-8">
                         <div>
                             <label class="block text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black/50">Your Name</label>
@@ -110,7 +133,7 @@
                         </div>
                         
                         <div class="pt-6 flex flex-col gap-4">
-                            <button onclick="sendToWhatsApp()" class="group w-full bg-[#25D366] text-white font-black py-5 uppercase tracking-widest text-xs hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-3">
+                            <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white font-black py-5 uppercase tracking-widest text-xs hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-3">
                                 <i class="fa-brands fa-whatsapp text-xl"></i> 
                                 WhatsApp Me First
                             </button>
@@ -126,27 +149,29 @@
         </section>
     </main>
 
-    <footer class="py-12 border-t border-black/5 text-center">
+    <footer class="py-12 border-t border-black/5 text-center px-6">
         <p class="text-[10px] text-black/40 font-bold uppercase tracking-[0.3em] mb-2">Currently based in</p>
-        <p class="text-sm font-medium mb-8">Porbandar, Gujarat, India.</p>
+        <p class="text-sm font-medium">Porbandar, Gujarat, India.</p>
     </footer>
 
     <script>
-        // Nav active state logic
-        const navLinks = document.querySelectorAll('.nav-link');
-        const currentPath = window.location.pathname.split("/").pop() || "index.html";
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
+        // Menu Toggle Logic
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            } else {
+                menu.classList.add('open');
+                document.body.style.overflow = 'hidden';
             }
-        });
+        }
 
         // Contact Logic
         function sendToWhatsApp() {
             const name = document.getElementById('userName').value || "Friend";
             const subject = document.getElementById('userSubject').value || "a project";
             const phone = "918140644320";
-            
             const message = `Hi Ronak, I'm ${name}. I'm interested in talking about ${subject}.`;
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         }
@@ -155,7 +180,6 @@
             const name = document.getElementById('userName').value || "Friend";
             const subject = document.getElementById('userSubject').value || "Portfolio Inquiry";
             const email = "ronaktwork@gmail.com"; 
-            
             window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=Hi Ronak, My name is ${name}.`;
         }
     </script>
