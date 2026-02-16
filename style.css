@@ -1,13 +1,18 @@
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: #f5f5f5;
-    color: #111;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
@@ -15,127 +20,138 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 60px;
+    padding: 2rem 5%;
+    width: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
 }
 
-.logo-box {
-    width: 16px;
-    height: 16px;
-    background: black;
-    display: inline-block;
+.square {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
 }
 
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #111;
-    font-size: 15px;
-}
-
-.btn-outline {
-    border: 1px solid #111;
-    padding: 12px 22px;
-    text-decoration: none;
-    color: #111;
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-/* Hero */
-/* Hero Section */
-.hero {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;   /* This stacks items vertically */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.hero-desc {
-    max-width: 600px;
-    font-size: 18px;
-    color: #555;
-}
-
-.view-projects {
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: black;
-    font-weight: 600;
-}
-
-.underline {
-    width: 120px;
-    height: 2px;
-    background: black;
-    margin-top: 8px;
-}
-
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 40px 60px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-}
-
-.small-title {
-    font-size: 11px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.socials {
-    margin-top: 30px;
+.nav-links {
     display: flex;
     gap: 30px;
 }
 
-.socials a {
+.nav-links a {
     text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: black;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-.location {
-    margin-top: 30px;
-}
-
-.small-title {
-    font-size: 11px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #777;
-}
-
-.socials a:hover {
-    opacity: 0.6;
-}
-
-copyright {
     color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.btn-outline {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.view-projects {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+/* Fixed Bottom Section (Socials & Location) */
+.footer-info {
+    margin-top: 4rem; /* Proper separation from hero text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between links and location */
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.location-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.65rem;
+    color: #888;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 4px; /* Fix for the "cramped" issue */
+}
+
+.city {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links, .btn-outline {
+        display: none; /* Simplification for mobile */
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
 }
